@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;600;900&display=swap");
+@import "reset.css";
+
+body {
+  font-family: "Noto Serif KR", serif;
+}
+
 .hidden {
   display: none;
 }
@@ -11,25 +18,35 @@ img {
   right: 0px;
   bottom: 0px;
   z-index: -1; /*text의 z-index 보다 낮으면 뒷 배경으로 설정 됩니다.*/
-  opacity: 75%; /*취향대로*/
+  opacity: 0.5;
+  object-fit: cover;
+}
+
+main {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+#greeting-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  margin-top: 30px;
 }
 
 h1 {
   font-size: 100px;
-  display: flex;
-  justify-content: center;
-  margin-top: 300px;
-  color: rgba(117, 182, 236, 0.993);
-  text-shadow: 0 0 7px rgb(34, 34, 33);
+  text-align: center;
+  font-weight: 900;
+  margin-bottom: 30px;
 }
 
 h2 {
-  font-size: 120px;
-  color: #c1d2e7;
-  display: flex;
-  justify-content: center;
-  margin-top: -50px;
-  text-shadow: 0 0 7px rgb(34, 34, 33);
+  font-size: 100px;
+  text-align: center;
+  font-weight: 600;
 }
 
 li {
@@ -39,14 +56,20 @@ li {
 }
 
 #quote {
-  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  font-size: 22px;
   text-align: center;
-  justify-content: center;
   color: antiquewhite;
   text-shadow: 0 0 3px rgb(255, 255, 255);
   position: fixed;
-  bottom: 30px;
+  bottom: 20px;
   width: 100%;
+}
+
+#quote span {
+  display: block;
+  margin-bottom: 15px;
 }
 
 form {
